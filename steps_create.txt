@@ -35,7 +35,7 @@ step5: git commit -m "create project"
 
 step6: git branch -M master
 
-step7: git remote add origin https://github.com/olegPilnik/flask_project.git
+step7: git remote add origin https://github.com/olegPilnik/Resume.git
 
 step8: git push -u origin master
 
