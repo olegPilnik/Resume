@@ -1,0 +1,42 @@
+_______Creating__Project____________
+
+step1: Create and activate virtualenv
+
+	python3 -m venv .venv
+	source .venv/bin/activate
+
+step2: Install framework Flask in virtualenv
+
+	python -m pip install Flask
+
+step3: create a file requirements.txt
+
+    pip freeze > requirements.txt
+
+step4: create file app.py in folder project  # create application
+
+    from flask import Flask #  import Flask
+	app = Flask(__name__) #  create instance class Flask
+
+
+__________________Git____________________________
+
+step1: Initialized empty Git repository
+
+	git init
+
+step2: Create file .gitignore in a project (gitignore.io)
+
+step3: Creating repository on github.com
+
+step4: git add .
+
+step5: git commit -m "create project"
+
+step6: git branch -M master
+
+step7: git remote add origin https://github.com/olegPilnik/flask_project.git
+
+step8: git push -u origin master
+
+
