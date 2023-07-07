@@ -262,27 +262,22 @@
           <div class="tech-skills">
             <h3 class="sidebar_title">Tech Skills</h3>
             <ul class="skills-list">
-              <li class="skills-item">HTML, CSS</li>
-              <li class="skills-item">JavaScript</li>
-              <li class="skills-item">React.js</li>
-              <li class="skills-item">Node.js</li>
-              <li class="skills-item">Python</li>
-              <li class="skills-item">SQL</li>     
+              {% block content %}
+                {% for item in tech_skills %}
+                  <li class="skills-item">{{ item['title'] }}</li>
+                {% endfor %}
+              {% endblock %} 
             </ul>
           </div>
           <!-- Soft Skills -->
           <div>
             <h3 class="sidebar_title">Soft Skills</h3>
             <ul class="skills-list">
-              {% block content %}
-                {% for item in soft_skills %}
-                  <li class="skills-item">{{ item.title }}</li>
-                {% endfor %}
-              {% endblock %}
-              <!-- <li class="skills-item">Scrum</li>
+              <li class="skills-item">qqq</li>
+              <li class="skills-item">Scrum</li>
               <li class="skills-item">Agile</li>
               <li class="skills-item">GTD</li>
-              <li class="skills-item">Teamwork</li> -->
+              <li class="skills-item">Teamwork</li>
             </ul>
           </div>
         </div>

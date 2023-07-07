@@ -1,25 +1,26 @@
 DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS contacts;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS tech_skills;
+DROP TABLE IF EXISTS soft_skills;
+
+
 
 CREATE TABLE projects (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
-    technologies TEXT NOT NULL
-    path_ TEXT NOT NULL,
-);
+    technologies TEXT NOT NULL);
 
 CREATE TABLE contacts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
-    contact TEXT NOT NULL,
-);
+    contact TEXT NOT NULL);
 
 CREATE TABLE tech_skills (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-);
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL);
 
 CREATE TABLE soft_skills (
-     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-);
+     id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL);
 

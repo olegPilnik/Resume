@@ -8,46 +8,54 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
+
+
 ''' ____________________projects___________________________'''
 
-cur.execute("INSERT INTO projects (title, technologies, path_) VALUES (?, ?, ?)",
-            ('https://hellen.p.goit.global/', 'technologies', 'https://hellen.p.goit.global/'))
+cur.execute("INSERT INTO projects (title, technologies) VALUES (?, ?)",
+            ('Resume', 'Python, Flask, SQLite3')
+            )
 
+'''____________________contacts___________________________'''
 
-''' ____________________contacts___________________________'''
+cur.execute("INSERT INTO contacts (title, contact) VALUES (?, ?)",
+            ('Phone number', '+38096-132-57-88')
+            )
+cur.execute("INSERT INTO contacts (title, contact) VALUES (?, ?)",
+            ('Email', 'olegpilnik85@gmail.com')
+            )
 
-cur.execute("INSERT INTO contacts (title, content) VALUES (?, ?)",
-            ('Phone number', '+380961111111'))
-cur.execute("INSERT INTO contacts (title, content) VALUES (?, ?)",
-            ('Email', 'oleg@gmail.com'))
+'''__________________tech_skills___________________________'''
 
+cur.execute("INSERT INTO tech_skills (id, title) VALUES (?, ?)",
+           (1, 'HTML, CSS')
+            )
+cur.execute("INSERT INTO tech_skills (id, title) VALUES (?, ?)",
+            (2, 'JavaScript')
+            )   
+cur.execute("INSERT INTO tech_skills (id, title) VALUES (?, ?)",
+            (3, 'React.js')
+            )   
+cur.execute("INSERT INTO tech_skills (id, title) VALUES (?, ?)",
+            (4, 'Node.js')
+            )   
+cur.execute("INSERT INTO tech_skills (id, title) VALUES (?, ?)",
+            (5, 'Python')
+            )   
+cur.execute("INSERT INTO tech_skills (id, title) VALUES (?, ?)",
+            (6, 'SQL')
+            ) 
 
-''' __________________tech_skills___________________________'''
+'''________________soft_skills___________________________'''
 
-cur.execute("INSERT INTO tech_skills (title) VALUES (?,)",
-            ('HTML, CSS',))
-cur.execute("INSERT INTO tech_skills (title) VALUES (?,)",
-            ('JavaScript',))   
-cur.execute("INSERT INTO tech_skills (title) VALUES (?,)",
-            ('React.js',))   
-cur.execute("INSERT INTO tech_skills (title) VALUES (?,)",
-            ('Node.js',))   
-cur.execute("INSERT INTO tech_skills (title) VALUES (?,)",
-            ('Python',))   
-cur.execute("INSERT INTO tech_skills (title) VALUES (?,)",
-            ('SQL',)) 
-
-
-''' __________________soft_skills___________________________'''
-
-cur.execute("INSERT INTO soft_skills (title) VALUES (?,)",
-            ('Scrum',))
-cur.execute("INSERT INTO soft_skills (title) VALUES (?,)",
-            ('Agile',))   
-cur.execute("INSERT INTO soft_skills (title) VALUES (?,)",
-            ('GTD',))   
-cur.execute("INSERT INTO soft_skills (title) VALUES (?,)",
-            ('Teamwork',))   
+cur.execute("INSERT INTO soft_skills (id, title) VALUES (?, ?)",
+            (1, 'Scrum'))
+cur.execute("INSERT INTO soft_skills (id, title) VALUES (?, ?)",
+            (2, 'Agile'))   
+cur.execute("INSERT INTO soft_skills (id, title) VALUES (?, ?)",
+            (3, 'GTD'))   
+cur.execute("INSERT INTO soft_skills (id, title) VALUES (?, ?)",
+            (4, 'Teamwork'))   
 
 
 connection.commit()
