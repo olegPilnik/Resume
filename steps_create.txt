@@ -13,10 +13,23 @@ step3: create a file requirements.txt
 
     pip freeze > requirements.txt
 
-step4: create file app.py in folder project  # create application
+_______Creating__structure____________
 
-    from flask import Flask #  import Flask
-	app = Flask(__name__) #  create instance class Flask
+step1: create file app.py in folder project  # create application
+
+    from flask import Flask, render_template     #  import Flask, render_template
+	app = Flask(__name__)                        #  create instance class Flask
+
+step2: creating folder (templates, static/css, static/img) in folder project
+
+    mkdir templates
+    mkdir static
+    mkdir static/css
+    mkdir static/img
+
+step3: Include styles in "base.html" file in section <head> via "url_for" function
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
 
 
 __________________Git____________________________
@@ -38,5 +51,13 @@ step6: git branch -M master
 step7: git remote add origin https://github.com/olegPilnik/Resume.git
 
 step8: git push -u origin master
+
+
+__________________run________
+export FLASK_APP=app
+export FLASK_ENV=development
+flask run
+
+
 
 
