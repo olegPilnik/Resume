@@ -16,7 +16,16 @@ app = Flask(__name__)    #  create instance class Flask
 @app.route('/')
 def index():
     conn = get_db_connection()
+    education = conn.execute('SELECT * FROM education').fetchall()
+    contacts = conn.execute('SELECT * FROM contacts').fetchall()
     tech_skills = conn.execute('SELECT * FROM tech_skills').fetchall()
+    soft_skills = conn.execute('SELECT * FROM soft_skills').fetchall()
+    
     conn.close()
-    return render_template('base.html', tech_skills=tech_skills)
+    return render_template('base.html', 
+                            education=education,
+                            contacts=contacts,
+                            tech_skills=tech_skills,
+                            soft_skills=soft_skills
+                            )
 

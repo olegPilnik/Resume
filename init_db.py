@@ -16,13 +16,35 @@ cur.execute("INSERT INTO projects (title, technologies) VALUES (?, ?)",
             ('Resume', 'Python, Flask, SQLite3')
             )
 
+''' ___________________education__________________________'''
+
+cur.execute("INSERT INTO education (name_institution, specialty, study_period) VALUES (?, ?, ?)",
+            ('Study Less', 'English Beginer', 'April 2023 - up to now | Ukraine')
+            )
+cur.execute("INSERT INTO education (name_institution, specialty, study_period) VALUES (?, ?, ?)",
+            ('Prog Academy', 'Python', 'February 2023 - up to now | Ukraine')
+            )
+cur.execute("INSERT INTO education (name_institution, specialty, study_period) VALUES (?, ?, ?)",
+            ('Skill-Up', 'Software testing', 'March 2019 - June 2019 | Ukraine')
+            )
+cur.execute("INSERT INTO education (name_institution, specialty, study_period) VALUES (?, ?, ?)",
+            ('Odesa National Academy of Communication', 'Master of Telecommunications', 
+             'September 2005 - May 2009 | Ukraine')
+            )
+cur.execute("INSERT INTO education (name_institution, specialty, study_period) VALUES (?, ?, ?)",
+            ('Dnipropetrovsk Radio Instrumentation College', 'Junior Specialist',
+             'September 2000 - May 2004 | Ukraine')
+            )
+
+
+
 '''____________________contacts___________________________'''
 
-cur.execute("INSERT INTO contacts (title, contact) VALUES (?, ?)",
-            ('Phone number', '+38096-132-57-88')
+cur.execute("INSERT INTO contacts (icon, title, contact, contact_link) VALUES (?, ?, ?, ?)",
+            ('C', 'Phone number', '+38096-132-57-88', 'tel:+30961325788')
             )
-cur.execute("INSERT INTO contacts (title, contact) VALUES (?, ?)",
-            ('Email', 'olegpilnik85@gmail.com')
+cur.execute("INSERT INTO contacts (icon, title, contact, contact_link) VALUES (?, ?, ?, ?)",
+            ('E', 'Email', 'olegpilnik85@gmail.com', 'mailto:olegpilnik85@gmail.com')
             )
 
 '''__________________tech_skills___________________________'''
